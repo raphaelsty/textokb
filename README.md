@@ -96,6 +96,7 @@ Here is how to use LUKE:
 ... pursue a business career. He went on co-founding a web software company Zip2 with his brother 
 ... Kimbal Musk."""
 
+>>> pipeline.process_sentence(text = text)
                  head              relation                        tail      score
 0           Elon Musk          per:siblings                 Kimbal Musk  10.436224
 1         Kimbal Musk          per:siblings                   Elon Musk  10.040980
