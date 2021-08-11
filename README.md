@@ -13,10 +13,10 @@ pip install git+https://github.com/raphaelsty/textokb --upgrade
 You will have to download spacy `en` model to do coreference resolution:
 
 ```sh
-pip install spacy && python -m spacy download en
+pip install spacy==2.1.0 && python -m spacy download en
 ```
 
-## Quick start:
+## Quick start
 
 ```python
 >>> from textokb import pipeline
@@ -69,7 +69,7 @@ pip install spacy && python -m spacy download en
 
 By default the model used is `wiki80_cnn_softmax`. I also added the model [Luke (Language Understanding with Knowledge-based Embeddings)](https://github.com/studio-ousia/luke) which provide a pre-trained models to do relation extraction. The results of the Luke model seem to be of better quality but the number of predicted relationships is smaller.
 
-## Here is how to use LUKE:
+## Here is how to use LUKE
 
 ```python
 >>> from textokb import pipeline
