@@ -168,7 +168,7 @@ Here is the list of available relations using Luke `studio-ousia/luke-large-fine
 
 ## Notes
 
-The first time you initialize the model with Opennre or Luke, you may have to wait a few minutes for the model to download.
+The first time you initialize the model with Opennre or Luke, you may have to wait a few minutes for the model to download. Since we use the [Wikifier API](http://wikifier.org/info.html) to track entities (NEL), it is necessary that your computer is connected to the internet. You can create your own credential for the API here: [Wikifier API registration](http://wikifier.org/register.html). Tomaz Bratanic mentions the possibility to replace Wikifier with [BLINK](https://github.com/facebookresearch/BLINK) however this library is very RAM intensive.
 
 ## ♻️ Work in progress
 
