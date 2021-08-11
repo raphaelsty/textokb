@@ -14,6 +14,9 @@ import spacy
 nltk.download("punkt")
 
 
+__all__ = ["TextToKnowledge"]
+
+
 class SpacyModelError(Exception):
     pass
 
@@ -32,7 +35,7 @@ class TextToKnowledge:
     Example
     -------
 
-    >>> from txtokb import pipeline
+    >>> from textokb import pipeline
 
     >>> types = ["human", "person", "company", "enterprise", "business", "geographic region",
     ...    "human settlement", "geographic entity", "territorial entity type", "organization"]
@@ -41,8 +44,21 @@ class TextToKnowledge:
 
     >>> text = "Elon Musk is a business magnate, industrial designer, and engineer. He is the founder, CEO, CTO, and chief designer of SpaceX. He is also early investor, CEO, and product architect of Tesla, Inc. He is also the founder of The Boring Company and the co-founder of Neuralink. A centibillionaire, Musk became the richest person in the world in January 2021, with an estimated net worth of $185 billion at the time, surpassing Jeff Bezos. Musk was born to a Canadian mother and South African father and raised in Pretoria, South Africa. He briefly attended the University of Pretoria before moving to Canada aged 17 to attend Queen's University. He transferred to the University of Pennsylvania two years later, where he received dual bachelor's degrees in economics and physics. He moved to California in 1995 to attend Stanford University, but decided instead to pursue a business career. He went on co-founding a web software company Zip2 with his brother Kimbal Musk."
 
-    >>> pipeline.process_sentence(text = text):
-
+    >>> pipeline.process_sentence(text = text)
+                                   head      relation         tail     score
+    0                            SpaceX      has part    Elon Musk  0.939970
+    1                          Pretoria      has part    Elon Musk  0.884259
+    2               Stanford University      has part    Elon Musk  0.884259
+    3        University of Pennsylvania      has part    Elon Musk  0.884259
+    4                The Boring Company      has part    Elon Musk  0.884259
+    ..                              ...           ...          ...       ...
+    105                      Jeff Bezos    subsidiary       SpaceX  0.435877
+    106      University of Pennsylvania    subsidiary       SpaceX  0.435877
+    107  Queen's University at Kingston    subsidiary       SpaceX  0.435877
+    108                          SpaceX  manufacturer  Tesla, Inc.  0.345905
+    109                     Tesla, Inc.      owned by       SpaceX  0.310732
+    <BLANKLINE>
+    [110 rows x 4 columns]
 
     References
     ----------
@@ -56,7 +72,7 @@ class TextToKnowledge:
         self.key = key
 
         try:
-            self.nlp = spacy.load("en")  # Only available in french
+            self.nlp = spacy.load("en")
         except OSError:
             raise SpacyModelError()
 
@@ -76,12 +92,12 @@ class TextToKnowledge:
         Example
         -------
 
-        >>> from txtokb import pipeline
+        >>> from textokb import pipeline
 
         >>> pipeline = pipeline.TextToKnowledge(key="jueidnxsctiurpwykpumtsntlschpx")
 
-        >>> pipeline.coreference(text = "I like Netflix, it contains great series."):
-        "I like Netflix, Netflix contains great series.""
+        >>> pipeline.coreference(text = "I like Netflix, it contains great series.")
+        'I like Netflix, Netflix contains great series.'
 
         References
         ----------
