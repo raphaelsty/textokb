@@ -7,7 +7,7 @@ In this blog post, Tomaz Bratanic presents a complete pipeline for extracting tr
 ## 🔧 Installation
 
 ```sh
-pip install git+https://username:token@github.com/raphaelsty/textokb --upgrade
+pip install git+https://github.com/raphaelsty/textokb --upgrade
 ```
 
 ```python
