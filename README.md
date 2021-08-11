@@ -59,4 +59,4 @@ pip install git+https://username:token@github.com/raphaelsty/textokb --upgrade
 
 #### Work in progress:
 
-I failed to use the `wiki80_bert_softmax` model from [Opennre](https://github.com/thunlp/OpenNRE) due to a pre-trained model loading error (i.e. tensorflow error). I used the lighter model `wiki80_cnn_softmax` in the context of reproducing Tomaz Bratanic's blog post. It would be interesting to be able to easily add different models and especially transformers.
+I failed to use the `wiki80_bert_softmax` model from [Opennre](https://github.com/thunlp/OpenNRE) due to a pre-trained model loading error (i.e. tensorflow error). I used the lighter model `wiki80_cnn_softmax` when reproducing Tomaz Bratanic's blog post. It would be interesting to be able to easily add different models and especially transformers.
