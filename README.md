@@ -1,4 +1,4 @@
-# TextOKb - Extract knowledge from raw text
+# Extract knowledge from raw text
 
 TThis repository is a copy and paste of ["From Text to Knowledge: The Information Extraction Pipeline"](https://towardsdatascience.com/from-text-to-knowledge-the-information-extraction-pipeline-b65e7e30273e) with some cosmetic updates. I made an installable version to evaluate it easily. The original code is available @ [trinity-ie](https://github.com/tomasonjo/trinity-ie).
 
@@ -56,3 +56,7 @@ pip install git+https://username:token@github.com/raphaelsty/textokb --upgrade
 <BLANKLINE>
 [110 rows x 4 columns]
 ```
+
+#### Work in progress:
+
+I failed to use the `wiki80_bert_softmax` model from [Opennre](https://github.com/thunlp/OpenNRE) due to a pre-trained model loading error (i.e. tensorflow error). I used the lighter model `wiki80_cnn_softmax` in the context of reproducing Tomaz Bratanic's blog post. It would be interesting to be able to easily add different models and especially transformers.
