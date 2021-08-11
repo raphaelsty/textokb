@@ -39,7 +39,7 @@ pip install spacy==2.1.0 && python -m spacy download en
 
 >>> pipeline = pipeline.TextToKnowledge(key="jueidnxsctiurpwykpumtsntlschpx", types=types, device=device)
 
->>> text = """ Elon Musk is a business magnate, industrial designer, and engineer. He is the founder, 
+>>> text = """Elon Musk is a business magnate, industrial designer, and engineer. He is the founder, 
 ... CEO, CTO, and chief designer of SpaceX. He is also early investor, CEO, and product architect of 
 ... Tesla, Inc. He is also the founder of The Boring Company and the co-founder of Neuralink. A 
 ... centibillionaire, Musk became the richest person in the world in January 2021, with an estimated 
@@ -92,7 +92,7 @@ By default the model used is `wiki80_cnn_softmax`. I also added the model [Luke 
 
 >>> pipeline = pipeline.TextToKnowledge(key="jueidnxsctiurpwykpumtsntlschpx", types=types, device=device, luke=True)
 
->>> text = """ Elon Musk is a business magnate, industrial designer, and engineer. He is the founder, 
+>>> text = """Elon Musk is a business magnate, industrial designer, and engineer. He is the founder, 
 ... CEO, CTO, and chief designer of SpaceX. He is also early investor, CEO, and product architect of 
 ... Tesla, Inc. He is also the founder of The Boring Company and the co-founder of Neuralink. A 
 ... centibillionaire, Musk became the richest person in the world in January 2021, with an estimated 
@@ -165,6 +165,10 @@ Here is the list of available relations using Luke `studio-ousia/luke-large-fine
     'per:title'
 ]
 ```
+
+## Notes
+
+The first time you initialize the model with Opennre or Luke, you may have to wait a few minutes for the model to download.
 
 ## ♻️ Work in progress
 
