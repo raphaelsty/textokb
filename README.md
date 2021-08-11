@@ -1,6 +1,6 @@
 # Extract knowledge from raw text
 
-TThis repository is a copy and paste of ["From Text to Knowledge: The Information Extraction Pipeline"](https://towardsdatascience.com/from-text-to-knowledge-the-information-extraction-pipeline-b65e7e30273e) with some cosmetic updates. I made an installable version to evaluate it easily. The original code is available @ [trinity-ie](https://github.com/tomasonjo/trinity-ie).
+This repository is a copy-paste of ["From Text to Knowledge: The Information Extraction Pipeline"](https://towardsdatascience.com/from-text-to-knowledge-the-information-extraction-pipeline-b65e7e30273e) with some cosmetic updates. I made an installable version to evaluate it easily. The original code is available @ [trinity-ie](https://github.com/tomasonjo/trinity-ie).
 
 In this blog post, Tomaz Bratanic presents a complete pipeline for extracting triples from raw text. The first step of the pipeline is to resolve the coreferences. The second step of the pipeline is to identify entities using the [Wikifier] API (http://wikifier.org/info.html). Finally, Tomaz Bratanic proposes to use the [Opennre](https://github.com/thunlp/OpenNRE) library to extract relations between entities within the text.
 
