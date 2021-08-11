@@ -59,7 +59,7 @@ pip install git+https://github.com/raphaelsty/textokb --upgrade
 11                   Elon Musk   manufacturer                      SpaceX  0.221294
 ```
 
-By default the model used is `wiki80_cnn_softmax`. I also added the model [Luke (Language Understanding with Knowledge-based Embeddings)](https://github.com/studio-ousia/luke) which provide a pre-trained models to do relation extraction.
+By default the model used is `wiki80_cnn_softmax`. I also added the model [Luke (Language Understanding with Knowledge-based Embeddings)](https://github.com/studio-ousia/luke) which provide a pre-trained models to do relation extraction. The results of the Luke model seem to be of better quality but the number of predicted relationships is smaller.
 
 Here is how to use LUKE:
 
