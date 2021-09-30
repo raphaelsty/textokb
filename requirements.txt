@@ -4,6 +4,5 @@ torch == 1.6.0
 pytest == 6.2.4
 pytest-cov == 2.11.1
 pandas == 1.2.4
-spacy == 2.1.0
 urllib3 == 1.26.6
 transformers == 4.9.2
