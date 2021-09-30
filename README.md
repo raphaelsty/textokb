@@ -1,6 +1,6 @@
 # Extract knowledge from raw text
 
-This repository is a copy-paste of ["From Text to Knowledge: The Information Extraction Pipeline"](https://towardsdatascience.com/from-text-to-knowledge-the-information-extraction-pipeline-b65e7e30273e) with some cosmetic updates. I made an installable version to evaluate it easily. The original code is available @ [trinity-ie](https://github.com/tomasonjo/trinity-ie). To create some value, I added the [Luke](https://github.com/studio-ousia/luke) model to predict relations between entities.
+This repository is a nearly copy-paste of ["From Text to Knowledge: The Information Extraction Pipeline"](https://towardsdatascience.com/from-text-to-knowledge-the-information-extraction-pipeline-b65e7e30273e) with some cosmetic updates. I made an installable version to evaluate it easily. The original code is available @ [trinity-ie](https://github.com/tomasonjo/trinity-ie). To create some value, I added the [Luke](https://github.com/studio-ousia/luke) model to predict relations between entities. Luke is a transformer (same family as Bert), its particularity is that during its pre-training, it trains parameters dedicated to entities within the attention mechanism. Luke is in fact a very efficient model on entity-related tasks. We use here the version of Luke fine-tuned on the dataset [TACRED](https://nlp.stanford.edu/projects/tacred/).
 
 In this blog post, Tomaz Bratanic presents a complete pipeline for extracting triples from raw text. The first step of the pipeline is to resolve the coreferences. The second step of the pipeline is to identify entities using the [Wikifier API](http://wikifier.org/info.html). Finally, Tomaz Bratanic proposes to use the [Opennre](https://github.com/thunlp/OpenNRE) library to extract relations between entities within the text.
 
@@ -168,7 +168,7 @@ Here is the list of available relations using Luke `studio-ousia/luke-large-fine
 
 ## Notes
 
-The first time you initialize the model with Opennre or Luke, you may have to wait a few minutes for the model to download.
+The first time you initialize the model with Opennre or Luke, you may have to wait a few minutes for the model to download. Since we use the [Wikifier API](http://wikifier.org/info.html) to track entities (NEL), it is necessary that your computer is connected to the internet. You can create your own credential for the API here: [Wikifier API registration](http://wikifier.org/register.html). Tomaz Bratanic mentions the possibility to replace Wikifier with [BLINK](https://github.com/facebookresearch/BLINK) however this library is very RAM intensive.
 
 ## ♻️ Work in progress
 
